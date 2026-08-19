@@ -1,0 +1,34 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\claude-plugins-official",
+    "lastUpdated": "2026-08-19T17:05:15.804Z"
+  },
+  "karpathy-skills": {
+    "source": {
+      "source": "github",
+      "repo": "multica-ai/andrej-karpathy-skills"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\karpathy-skills",
+    "lastUpdated": "2026-07-17T19:53:39.773Z"
+  },
+  "caveman": {
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\caveman",
+    "lastUpdated": "2026-07-22T21:29:01.208Z"
+  },
+  "i-have-adhd": {
+    "source": {
+      "source": "github",
+      "repo": "ayghri/i-have-adhd"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\i-have-adhd",
+    "lastUpdated": "2026-08-05T01:43:06.149Z"
+  }
+}

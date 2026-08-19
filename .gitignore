@@ -1,0 +1,7 @@
+# never commit credentials
+*gh-credentials*
+*.token
+.credentials.json
+# noise
+.DS_Store
+Thumbs.db

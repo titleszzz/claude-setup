@@ -1,0 +1,40 @@
+{
+    "remote.SSH.remotePlatform": {
+        "REDACTED-IP": "linux",
+        "192.168.50.141": "linux",
+        "pi5": "linux"
+    },
+    "workbench.startupEditor": "none",
+    "claudeCode.useTerminal": true,
+    "terminal.integrated.gpuAcceleration": "off",
+    "terminal.integrated.localEchoLatencyThreshold": 30,
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
+            "args": [],
+            "icon": "terminal-cmd"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.scrollback": 20000,
+    "terminal.integrated.persistentSessionScrollback": 5000,
+    "terminal.integrated.env.windows": {
+        "CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN": "1"
+    },
+    "terminal.integrated.smoothScrolling": true,
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/9800x3d/.vscode/custom-terminal-scrollbar.css"
+    ],
+    "workbench.colorCustomizations": {
+        "scrollbarSlider.background": "#8a8a8aaa",
+        "scrollbarSlider.hoverBackground": "#b0b0b0dd",
+        "scrollbarSlider.activeBackground": "#d0d0d0ff"
+    }
+}

@@ -1,0 +1,20 @@
+/* Terminal scrollbar: always visible, wider, solid colour.
+   VSCode default hides it with opacity:0 (.xterm-invisible) until hover. */
+
+.xterm .xterm-scrollable-element > .xterm-scrollbar,
+.xterm .xterm-scrollable-element > .xterm-invisible {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transition: none !important;
+    width: 14px !important;
+}
+
+.xterm .xterm-scrollable-element > .xterm-scrollbar > .xterm-slider {
+    background: rgba(150, 150, 150, 0.85) !important;
+    width: 14px !important;
+    border-radius: 7px;
+}
+
+.xterm .xterm-scrollable-element > .xterm-scrollbar > .xterm-slider:hover {
+    background: rgba(200, 200, 200, 0.95) !important;
+}
