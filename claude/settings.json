@@ -56,5 +56,5 @@
   "fastMode": true,
   "autoUpdatesChannel": "latest",
   "theme": "dark",
-  "autoCompactEnabled": false
+  "autoCompactEnabled": true
 }
