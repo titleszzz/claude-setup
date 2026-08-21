@@ -44,6 +44,17 @@ Rules:
 End every update with:
 - **Next prompt / next action**
 
+Make it a real prompt, not a hint. Write the actual text I could copy and paste
+straight back to you to continue the work, or the exact command I would run.
+A one-line fragment like "tell me which option" is not enough — spell out the
+whole thing, including the choice I am making and any detail you would need
+from me to act without asking again.
+
+If a decision is mine to make, write one ready-to-send prompt per option and
+label them, so picking is copy, paste, send. If the next step is a command,
+give the full command line, not a description of it. If nothing is needed from
+me, say that plainly instead of inventing a prompt.
+
 When summarizing diagnostics, separate:
 - facts we proved,
 - guesses or interpretations,
