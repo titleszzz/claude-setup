@@ -55,6 +55,10 @@ label them, so picking is copy, paste, send. If the next step is a command,
 give the full command line, not a description of it. If nothing is needed from
 me, say that plainly instead of inventing a prompt.
 
+Keep each prompt on ONE line. Do not hard-wrap it and do not break it across
+lines — every line break behaves like shift+enter when I paste it, so a wrapped
+prompt is annoying to send. One long line is fine; several short lines is not.
+
 When summarizing diagnostics, separate:
 - facts we proved,
 - guesses or interpretations,
