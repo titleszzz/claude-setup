@@ -42,7 +42,7 @@ json_reset() {
 }
 
 model=$(json_str "$input" "display_name")
-[ -z "$model" ] && model="Claude"
+[ -z "$model" ] && model="Antigravity"
 
 dir=$(json_str "$input" "current_dir")
 [ -z "$dir" ] && dir=$(json_str "$input" "cwd")
