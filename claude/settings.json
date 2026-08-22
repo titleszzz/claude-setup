@@ -55,5 +55,6 @@
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "theme": "dark",
-  "autoCompactEnabled": true
+  "autoCompactEnabled": true,
+  "model": "sonnet"
 }
