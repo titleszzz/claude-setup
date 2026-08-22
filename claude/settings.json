@@ -53,7 +53,6 @@
     }
   },
   "effortLevel": "high",
-  "fastMode": true,
   "autoUpdatesChannel": "latest",
   "theme": "dark",
   "autoCompactEnabled": true
