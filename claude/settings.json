@@ -53,8 +53,10 @@
     }
   },
   "effortLevel": "high",
+  "dialogExpiry": "never",
   "autoUpdatesChannel": "latest",
   "theme": "dark",
   "autoCompactEnabled": true,
-  "model": "sonnet"
+  "remoteControlAtStartup": true,
+  "crossSessionInbound": "accept"
 }
