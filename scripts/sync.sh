@@ -42,6 +42,14 @@ copy "$CLAUDE_DIR/keybindings.json"                 "$REPO/claude/keybindings.js
 copy "$CLAUDE_DIR/plugins/installed_plugins.json"   "$REPO/claude/plugins/installed_plugins.json"
 copy "$CLAUDE_DIR/plugins/known_marketplaces.json"  "$REPO/claude/plugins/known_marketplaces.json"
 
+# Hooks: settings.json points at these scripts by absolute path, so a restore
+# without them leaves every hook command broken. Mirror the whole directory.
+if [ -d "$CLAUDE_DIR/hooks" ]; then
+  rm -rf "$REPO/claude/hooks"
+  mkdir -p "$REPO/claude/hooks"
+  cp -r "$CLAUDE_DIR/hooks/." "$REPO/claude/hooks/"
+fi
+
 # Skills: mirror real directories only. Symlinked skills are recorded, not copied.
 # A skill holding a `.local-only` marker file is skipped entirely — that is how a
 # skill carrying private or work data stays off a public mirror. The marker lives
