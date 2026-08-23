@@ -1,8 +1,12 @@
 #!/usr/bin/env node
-// PreCompact hook: snapshot mechanical session state to handoff-state.md before
-// context is compacted. Never blocks compaction — always exits 0.
+// Auto-capture hook for handoff-state.md. Registered on two events:
+//   PreCompact  — before context is compacted (auto or manual /compact)
+//   SessionEnd  — when the session closes, so quitting also leaves a note
+// Records mechanical facts only. Never blocks either event — always exits 0.
+// Will not overwrite a manual /handoff note less than MANUAL_GRACE_HOURS old:
+// that note has reasoning in it that this script cannot reproduce.
 import { execFileSync } from 'node:child_process'
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
 
@@ -52,7 +56,11 @@ const recentPrompts = (path, n) => {
 try {
   const input = JSON.parse((await read(process.stdin)) || '{}')
   const cwd = input.cwd || process.cwd()
-  const trigger = input.trigger || 'unknown'
+  const event = input.hook_event_name || 'unknown'
+  const trigger = input.trigger || input.reason || 'unknown'
+  const occasion = event === 'SessionEnd'
+    ? `at session end (${trigger})`
+    : `before ${trigger} compaction`
 
   const slug = cwd.replace(/[^A-Za-z0-9]/g, '-')
   const dir = join(homedir(), '.claude', 'projects', slug, 'memory')
@@ -63,6 +71,18 @@ try {
   const pad = (x) => String(x).padStart(2, '0')
   const day = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`
   const stamp = `${day} ${pad(now.getHours())}:${pad(now.getMinutes())}`
+
+  // A manual /handoff note carries what was half-done and what comes next.
+  // This script knows neither, so it must not clobber a fresh one.
+  const MANUAL_GRACE_HOURS = 12
+  if (existsSync(file)) {
+    const prev = readFileSync(file, 'utf8')
+    const ageHours = (Date.now() - statSync(file).mtimeMs) / 3600000
+    if (prev.includes('## What I was doing') && ageHours < MANUAL_GRACE_HOURS) {
+      console.log(`handoff: kept the manual note (${ageHours.toFixed(1)}h old), not overwriting it`)
+      process.exit(0)
+    }
+  }
 
   const branch = git(cwd, ['rev-parse', '--abbrev-ref', 'HEAD']) || 'n/a (not a git repo)'
   const dirty = git(cwd, ['status', '--porcelain'])
@@ -76,7 +96,7 @@ metadata:
   type: project
 ---
 
-# Handoff — ${stamp} (auto, before ${trigger} compaction)
+# Handoff — ${stamp} (auto, ${occasion})
 
 **Project:** ${cwd}
 **Branch:** ${branch}
@@ -90,7 +110,7 @@ ${commits ? '```\n' + commits + '\n```' : 'n/a'}
 **Last things I was asked to do:**
 ${prompts.length ? prompts.map((p) => `- ${p}`).join('\n') : '- n/a'}
 
-> Written by the PreCompact hook, not by Claude. It records mechanical facts
+> Written by the auto-capture hook, not by Claude. It records mechanical facts
 > only — it does not know what was half-finished or what the next step is.
 > Run \`/handoff\` yourself for a note that includes that.
 `

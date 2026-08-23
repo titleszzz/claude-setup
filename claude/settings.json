@@ -9,6 +9,15 @@
             "timeout": 60
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/9800x3d/.claude/hooks/handoff-capture.mjs",
+            "timeout": 30
+          }
+        ]
       }
     ],
     "SessionStart": [
@@ -36,7 +45,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node C:/Users/9800x3d/.claude/hooks/precompact-handoff.mjs",
+            "command": "node C:/Users/9800x3d/.claude/hooks/handoff-capture.mjs",
             "timeout": 30
           }
         ]
