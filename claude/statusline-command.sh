@@ -90,10 +90,15 @@ format_countdown() {
   fi
 }
 
-sep=" $(printf "%b│%b" "$GRAY" "$RESET") "
+sep="$(printf "%b│%b" "$GRAY" "$RESET")"
+
+# "(1M context)" suffix when the model's context window is the 1M variant.
+ctx_size=$(json_num "$input" "context_window_size")
+one_m=""
+[ -n "$ctx_size" ] && [ "$ctx_size" -ge 1000000 ] && one_m="(1M context)"
 
 segments=()
-segments+=("$(printf "%b🤖 %s%b" "$CYAN$BOLD" "$model" "$RESET")")
+segments+=("$(printf "%b🤖 %s%s%b" "$CYAN$BOLD" "$model" "$one_m" "$RESET")")
 [ -n "$dir_name" ] && segments+=("$(printf "%b📂 %s%b" "$BLUE" "$dir_name" "$RESET")")
 
 # context_window's used_percentage is a nested field (json_obj can't isolate
@@ -101,7 +106,7 @@ segments+=("$(printf "%b🤖 %s%b" "$CYAN$BOLD" "$model" "$RESET")")
 # the first "used_percentage" in the payload, ahead of rate_limits.
 ctx_pct=$(json_num "$input" "used_percentage")
 if [ -n "$ctx_pct" ]; then
-  segments+=("$(printf "📊 %bcontext:%b%s" "$BOLD" "$RESET" "$(make_bar "$ctx_pct")")")
+  segments+=("$(printf "📊%bcontext:%b%s" "$BOLD" "$RESET" "$(make_bar "$ctx_pct")")")
 fi
 
 five_obj=$(json_obj "$input" "five_hour")
@@ -115,14 +120,14 @@ if [ -n "$five_pct" ] || [ -n "$week_pct" ]; then
   rl=""
   if [ -n "$five_pct" ]; then
     cd_str=""
-    [ -n "$five_reset" ] && cd_str=" $(printf "%b⏱️ %s%b" "$GRAY" "$(format_countdown "$five_reset")" "$RESET")"
-    rl="$(printf "⚡ %bclaude5h:%b%s%s" "$MAGENTA$BOLD" "$RESET" "$(make_bar "$five_pct")" "$cd_str")"
+    [ -n "$five_reset" ] && cd_str="$(printf "%b⏱️%s%b" "$GRAY" "$(format_countdown "$five_reset")" "$RESET")"
+    rl="$(printf "⚡%b5h:%b%s%s" "$MAGENTA$BOLD" "$RESET" "$(make_bar "$five_pct")" "$cd_str")"
   fi
   if [ -n "$week_pct" ]; then
     cd_str=""
-    [ -n "$week_reset" ] && cd_str=" $(printf "%b⏱️ %s%b" "$GRAY" "$(format_countdown "$week_reset")" "$RESET")"
-    wk="$(printf "📅 %bclaude7d:%b%s%s" "$MAGENTA$BOLD" "$RESET" "$(make_bar "$week_pct")" "$cd_str")"
-    [ -n "$rl" ] && rl="$rl $wk" || rl="$wk"
+    [ -n "$week_reset" ] && cd_str="$(printf "%b⏱️%s%b" "$GRAY" "$(format_countdown "$week_reset")" "$RESET")"
+    wk="$(printf "📅%b7d:%b%s%s" "$MAGENTA$BOLD" "$RESET" "$(make_bar "$week_pct")" "$cd_str")"
+    rl="${rl}${wk}"
   fi
   segments+=("$rl")
 fi
