@@ -66,6 +66,22 @@ metadata:
 
 Overwrite every time. There is no history — one file, latest state.
 
+## Check
+
+`/handoff check` — validate the note without changing it.
+
+Run `node ~/.claude/skills/handoff/scripts/check-handoff.mjs --verbose` from the
+project directory and relay the output. It reports:
+
+- structure — frontmatter and required sections present
+- shape — auto (mechanical, from the PreCompact hook) or manual (full note)
+- age — warns at 7 days, harder at 14
+- drift — recorded branch and uncommitted files vs live `git status`
+- index — exactly one pointer line in `MEMORY.md`
+
+Exit codes: 0 clean, 1 something is broken, 2 no note exists yet.
+This also runs automatically on every SessionStart; only problems are printed there.
+
 ## Resume
 
 1. Get the path from the helper. If the file does not exist, say so and stop.
