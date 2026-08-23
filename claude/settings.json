@@ -20,6 +20,26 @@
             "timeout": 60
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash C:/Users/9800x3d/.claude/hooks/sessionstart-handoff.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/9800x3d/.claude/hooks/precompact-handoff.mjs",
+            "timeout": 30
+          }
+        ]
       }
     ]
   },
