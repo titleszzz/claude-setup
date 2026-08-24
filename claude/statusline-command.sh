@@ -92,13 +92,8 @@ format_countdown() {
 
 sep="$(printf "%b│%b" "$GRAY" "$RESET")"
 
-# "(1M context)" suffix when the model's context window is the 1M variant.
-ctx_size=$(json_num "$input" "context_window_size")
-one_m=""
-[ -n "$ctx_size" ] && [ "$ctx_size" -ge 1000000 ] && one_m="(1M context)"
-
 segments=()
-segments+=("$(printf "%b🤖 %s%s%b" "$CYAN$BOLD" "$model" "$one_m" "$RESET")")
+segments+=("$(printf "%b🤖 %s%b" "$CYAN$BOLD" "$model" "$RESET")")
 [ -n "$dir_name" ] && segments+=("$(printf "%b📂 %s%b" "$BLUE" "$dir_name" "$RESET")")
 
 # context_window's used_percentage is a nested field (json_obj can't isolate
