@@ -1,4 +1,5 @@
 {
+  "model": "claude-fable-5[1m]",
   "hooks": {
     "SessionEnd": [
       {
@@ -87,6 +88,5 @@
   "theme": "dark",
   "autoCompactEnabled": true,
   "remoteControlAtStartup": true,
-  "crossSessionInbound": "accept",
-  "model": "claude-fable-5[1m]"
+  "crossSessionInbound": "accept"
 }
