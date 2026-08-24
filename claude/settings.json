@@ -87,5 +87,6 @@
   "theme": "dark",
   "autoCompactEnabled": true,
   "remoteControlAtStartup": true,
-  "crossSessionInbound": "accept"
+  "crossSessionInbound": "accept",
+  "model": "claude-fable-5[1m]"
 }
