@@ -86,6 +86,7 @@
   "autoUpdatesChannel": "latest",
   "theme": "dark",
   "autoCompactEnabled": true,
+  "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept"
 }
