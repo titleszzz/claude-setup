@@ -30,5 +30,13 @@
     },
     "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\i-have-adhd",
     "lastUpdated": "2026-08-05T01:43:06.149Z"
+  },
+  "ui-ux-pro-max-skill": {
+    "source": {
+      "source": "github",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\ui-ux-pro-max-skill",
+    "lastUpdated": "2026-08-25T12:35:01.616Z"
   }
 }

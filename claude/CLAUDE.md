@@ -80,3 +80,18 @@ extensions — added, removed, enabled, or disabled — run:
 
 It captures the live config, commits, and pushes. Do it yourself, do not ask.
 A `SessionEnd` hook runs it too, so this is the belt to that hook's braces.
+
+# UI / design work
+
+Any time we design or build a user interface — pages, components, colors,
+typography, layout, accessibility, animation, charts, or a design review —
+invoke the plugin skill `ui-ux-pro-max:ui-ux-pro-max` first and follow it.
+Do this before writing markup or CSS, not after.
+
+Sibling skills in the same plugin, use when they fit:
+`ui-ux-pro-max:ui-styling`, `ui-ux-pro-max:design-system`,
+`ui-ux-pro-max:brand`, `ui-ux-pro-max:banner-design`, `ui-ux-pro-max:slides`.
+
+Note: `ui-ux-pro-max:design` is the plugin's own skill and is a different thing
+from the built-in `design` canvas skill. Use the namespaced name so there is no
+mix-up.

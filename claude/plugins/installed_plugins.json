@@ -30,6 +30,16 @@
         "lastUpdated": "2026-08-05T01:43:06.524Z",
         "gitCommitSha": "d05af1e4ac2259846e81686d14180d46d84acc2d"
       }
+    ],
+    "ui-ux-pro-max@ui-ux-pro-max-skill": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\ui-ux-pro-max-skill\\ui-ux-pro-max\\2.13.0",
+        "version": "2.13.0",
+        "installedAt": "2026-08-25T12:35:01.615Z",
+        "lastUpdated": "2026-08-25T12:35:01.615Z",
+        "gitCommitSha": "9f1824aa7bd87b7a2db8e19afd7fbe40d5f354e5"
+      }
     ]
   }
 }
