@@ -14,11 +14,11 @@
     "caveman@caveman": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\caveman\\caveman\\0d95a81d35a9",
-        "version": "0d95a81d35a9",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\caveman\\caveman\\17f9f2ec2377",
+        "version": "17f9f2ec2377",
         "installedAt": "2026-07-22T21:29:44.419Z",
-        "lastUpdated": "2026-07-22T21:29:44.419Z",
-        "gitCommitSha": "0d95a81d35a9f2d123a5e9430d1cfc43d55f1bb0"
+        "lastUpdated": "2026-08-28T05:34:10.055Z",
+        "gitCommitSha": "17f9f2ec2377b0bfe16b52ee03a462e7f0a02bc8"
       }
     ],
     "i-have-adhd@i-have-adhd": [
