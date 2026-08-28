@@ -11,16 +11,6 @@
         "gitCommitSha": "2c606141936f1eeef17fa3043a72095b4765b9c2"
       }
     ],
-    "caveman@caveman": [
-      {
-        "scope": "user",
-        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\caveman\\caveman\\17f9f2ec2377",
-        "version": "17f9f2ec2377",
-        "installedAt": "2026-07-22T21:29:44.419Z",
-        "lastUpdated": "2026-08-28T05:34:10.055Z",
-        "gitCommitSha": "17f9f2ec2377b0bfe16b52ee03a462e7f0a02bc8"
-      }
-    ],
     "i-have-adhd@i-have-adhd": [
       {
         "scope": "user",
