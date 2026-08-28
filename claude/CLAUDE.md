@@ -96,4 +96,35 @@ Note: `ui-ux-pro-max:design` is the plugin's own skill and is a different thing
 from the built-in `design` canvas skill. Use the namespaced name so there is no
 mix-up.
 
+# Subagents
+
+Two tools shape output, and they reach a subagent differently. The difference
+is what you have to do by hand.
+
+- **RTK is automatic.** It is a `PreToolUse` hook on Bash, so a subagent's
+  shell calls go through it exactly like your own. Nothing to add and nothing
+  to ask for. Checked 2026-08-29: a subagent was sent `ls -la` and reported
+  back RTK's reformatted output, not raw shell.
+- **Caveman is not.** The plugin hooks only `SessionStart` and
+  `UserPromptSubmit`. A subagent starts no session and is sent no user prompt,
+  so those rules never enter its context and it writes full prose. This cannot
+  be fixed in settings — it is which event each tool hooks.
+
+So put the style in the prompt yourself. End every subagent prompt with:
+
+    Write your report in caveman style: terse, drop articles and filler,
+    fragments are fine, no preamble, no pleasantries, no restating the task
+    back to me. Keep every technical fact — file paths, line numbers, exact
+    error strings, numbers, and whether something is proved or suspected.
+    Compress the writing, never the substance, and never soften a finding to
+    make it shorter.
+
+Two things that rule must NOT touch:
+
+- **Anything the subagent writes for anyone other than me** — code, comments,
+  commit messages, docs, issue or PR text — stays normal prose. Caveman is for
+  the report that comes back, not for what gets committed.
+- **A warning about data loss, a security hole, or an irreversible step** is
+  written in full plain sentences. A compressed warning is a misread warning.
+
 @RTK.md
