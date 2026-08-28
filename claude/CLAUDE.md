@@ -95,3 +95,5 @@ Sibling skills in the same plugin, use when they fit:
 Note: `ui-ux-pro-max:design` is the plugin's own skill and is a different thing
 from the built-in `design` canvas skill. Use the namespaced name so there is no
 mix-up.
+
+@RTK.md
