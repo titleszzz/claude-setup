@@ -71,7 +71,8 @@
   "enabledPlugins": {
     "andrej-karpathy-skills@karpathy-skills": true,
     "i-have-adhd@i-have-adhd": true,
-    "ui-ux-pro-max@ui-ux-pro-max-skill": true
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "caveman@caveman": true
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
