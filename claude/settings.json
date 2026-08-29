@@ -106,5 +106,6 @@
   "autoCompactEnabled": true,
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
-  "crossSessionInbound": "accept"
+  "crossSessionInbound": "accept",
+  "model": "claude-fable-5[1m]"
 }
