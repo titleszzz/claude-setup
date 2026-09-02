@@ -67,6 +67,13 @@ holding a `.local-only` marker file is skipped by `sync.sh` — that is how a sk
 carrying work or private data stays off a public repo. Those skills live only on
 the machine that made them, so back them up separately.
 
+Binary assets that ship inside a skill — fonts, audio, images, video, archives —
+are ignored by `.gitignore` and never reach this repo. They are stock files that
+come back when the skill is reinstalled, so the mirror stays text-only: a smaller
+repo, no third-party media redistributed, and nothing for the binary guard in
+`scripts/sync.sh` to trip over. A restore therefore needs the skill reinstalled,
+not just this repo copied.
+
 ### VS Code
 
 | Setting | Why |
@@ -298,7 +305,7 @@ pushes only if something actually changed. Nothing changed → it prints
 **Manual.** Any time:
 
 ```bash
-bash /d/Claude_libary/claude-setup/scripts/sync.sh
+bash /e/Claude_libary/claude-setup/scripts/sync.sh
 ```
 
 `~/.claude/CLAUDE.md` also carries a standing instruction telling Claude to run

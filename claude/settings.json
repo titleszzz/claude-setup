@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash D:/Claude_libary/claude-setup/scripts/sync.sh",
+            "command": "bash E:/Claude_libary/claude-setup/scripts/sync.sh",
             "timeout": 60
           }
         ]
@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash D:/Claude_libary/claude-setup/scripts/sync.sh",
+            "command": "bash E:/Claude_libary/claude-setup/scripts/sync.sh",
             "timeout": 60
           }
         ]
@@ -106,6 +106,5 @@
   "autoCompactEnabled": true,
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
-  "crossSessionInbound": "accept",
-  "model": "claude-fable-5[1m]"
+  "crossSessionInbound": "accept"
 }

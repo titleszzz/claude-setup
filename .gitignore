@@ -5,3 +5,48 @@
 # noise
 .DS_Store
 Thumbs.db
+
+# Binary assets shipped inside skills (fonts, audio, images, video, archives).
+# They are stock files that come back when the skill is reinstalled, so the
+# mirror stays text-only: smaller repo, no third-party media redistributed, and
+# the binary guard in scripts/sync.sh has nothing to trip over.
+claude/skills/**/*.woff
+claude/skills/**/*.woff2
+claude/skills/**/*.ttf
+claude/skills/**/*.otf
+claude/skills/**/*.mp3
+claude/skills/**/*.wav
+claude/skills/**/*.ogg
+claude/skills/**/*.m4a
+claude/skills/**/*.mp4
+claude/skills/**/*.mov
+claude/skills/**/*.webm
+claude/skills/**/*.png
+claude/skills/**/*.jpg
+claude/skills/**/*.jpeg
+claude/skills/**/*.gif
+claude/skills/**/*.webp
+claude/skills/**/*.ico
+claude/skills/**/*.pdf
+claude/skills/**/*.zip
+claude/skills/**/*.wasm
+claude/agents-skills/**/*.woff
+claude/agents-skills/**/*.woff2
+claude/agents-skills/**/*.ttf
+claude/agents-skills/**/*.otf
+claude/agents-skills/**/*.mp3
+claude/agents-skills/**/*.wav
+claude/agents-skills/**/*.ogg
+claude/agents-skills/**/*.m4a
+claude/agents-skills/**/*.mp4
+claude/agents-skills/**/*.mov
+claude/agents-skills/**/*.webm
+claude/agents-skills/**/*.png
+claude/agents-skills/**/*.jpg
+claude/agents-skills/**/*.jpeg
+claude/agents-skills/**/*.gif
+claude/agents-skills/**/*.webp
+claude/agents-skills/**/*.ico
+claude/agents-skills/**/*.pdf
+claude/agents-skills/**/*.zip
+claude/agents-skills/**/*.wasm

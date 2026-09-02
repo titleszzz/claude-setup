@@ -74,14 +74,14 @@ internal research log.
 
 # Keep the setup repo in sync
 
-`D:\Claude_libary\claude-setup` mirrors this machine's global Claude Code and
+`E:\Claude_libary\claude-setup` mirrors this machine's global Claude Code and
 VS Code config, and is pushed to GitHub.
 
 After any change to a global skill, plugin, marketplace, `~/.claude/settings.json`,
 `~/.claude/CLAUDE.md`, the status line script, or VS Code settings / keybindings /
 extensions — added, removed, enabled, or disabled — run:
 
-    bash D:/Claude_libary/claude-setup/scripts/sync.sh
+    bash E:/Claude_libary/claude-setup/scripts/sync.sh
 
 It captures the live config, commits, and pushes. Do it yourself, do not ask.
 A `SessionEnd` hook runs it too, so this is the belt to that hook's braces.
