@@ -41,6 +41,6 @@ test("rejects local / private hosts (SSRF guard, m11)", () => {
     assert.equal(isDirectMediaUrl(u), false, `should block ${u}`);
   }
   // A public host that merely starts with similar digits is still allowed.
-  assert.equal(isDirectMediaUrl("https://172.40.0.1/a.mp4"), true, "172.40 is public");
+  assert.equal(isDirectMediaUrl("https://REDACTED-IP/a.mp4"), true, "172.40 is public");
   assert.equal(isDirectMediaUrl("https://11.example.com/a.mp4"), true);
 });
