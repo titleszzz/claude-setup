@@ -51,6 +51,17 @@
         ]
       }
     ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/9800x3d/.claude/hooks/subagent-notes.mjs",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
     "PreCompact": [
       {
         "hooks": [
