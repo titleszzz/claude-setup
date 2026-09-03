@@ -50,3 +50,6 @@ claude/agents-skills/**/*.ico
 claude/agents-skills/**/*.pdf
 claude/agents-skills/**/*.zip
 claude/agents-skills/**/*.wasm
+
+# hook run logs — they change on every run and are not config
+claude/hooks/*.log
