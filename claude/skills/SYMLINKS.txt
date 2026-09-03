@@ -1,0 +1,2 @@
+find-skills -> /c/Users/9800x3d/.agents/skills/find-skills
+find-skills -> /c/Users/9800x3d/.agents/skills/find-skills
