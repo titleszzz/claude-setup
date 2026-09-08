@@ -117,5 +117,6 @@
   "autoCompactEnabled": true,
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
-  "crossSessionInbound": "accept"
+  "crossSessionInbound": "accept",
+  "agentPushNotifEnabled": true
 }
