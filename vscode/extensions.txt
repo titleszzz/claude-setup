@@ -1,5 +1,6 @@
 anthropic.claude-code
 be5invis.vscode-custom-css
+local-tools.codex-statusline-local
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
