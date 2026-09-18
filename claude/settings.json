@@ -118,5 +118,6 @@
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "model": "claude-fable-5-1[1m]"
 }
