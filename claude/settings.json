@@ -1,5 +1,4 @@
 {
-  "model": "claude-fable-5-1[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -116,9 +115,9 @@
   "autoUpdatesChannel": "latest",
   "theme": "dark",
   "autoCompactEnabled": true,
+  "switchModelsOnFlag": false,
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
-  "agentPushNotifEnabled": true,
-  "switchModelsOnFlag": false
+  "agentPushNotifEnabled": true
 }
