@@ -40,6 +40,16 @@
         "lastUpdated": "2026-08-28T05:41:43.250Z",
         "gitCommitSha": "17f9f2ec2377b0bfe16b52ee03a462e7f0a02bc8"
       }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.4.1",
+        "version": "6.4.1",
+        "installedAt": "2026-09-24T09:00:45.505Z",
+        "lastUpdated": "2026-09-24T09:00:45.505Z",
+        "gitCommitSha": "5bf4e78011075bcfc0dc295f0724994cd123ee71"
+      }
     ]
   }
 }

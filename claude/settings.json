@@ -82,7 +82,8 @@
     "andrej-karpathy-skills@karpathy-skills": true,
     "i-have-adhd@i-have-adhd": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "superpowers@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
@@ -111,6 +112,11 @@
     }
   },
   "effortLevel": "high",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    }
+  },
   "dialogExpiry": "never",
   "autoUpdatesChannel": "latest",
   "theme": "dark",
@@ -119,6 +125,5 @@
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
-  "agentPushNotifEnabled": true,
-  "model": "claude-fable-5-1[1m]"
+  "agentPushNotifEnabled": true
 }
