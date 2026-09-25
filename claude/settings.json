@@ -114,7 +114,7 @@
   "effortLevel": "high",
   "modelSettings": {
     "claude-opus-5-5": {
-      "effortLevel": "xhigh"
+      "effortLevel": "high"
     }
   },
   "dialogExpiry": "never",
@@ -125,5 +125,6 @@
   "autoContinueAtUsageLimit": false,
   "remoteControlAtStartup": true,
   "crossSessionInbound": "accept",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "model": "opus[1m]"
 }
