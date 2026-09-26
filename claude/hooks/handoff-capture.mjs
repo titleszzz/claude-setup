@@ -85,7 +85,12 @@ try {
   }
 
   const branch = git(cwd, ['rev-parse', '--abbrev-ref', 'HEAD']) || 'n/a (not a git repo)'
-  const dirty = git(cwd, ['status', '--porcelain'])
+  // Cap the file list: a big dirty tree used to put hundreds of lines into every session start.
+  const dirtyAll = git(cwd, ['status', '--porcelain'])
+  const dirtyLines = dirtyAll ? dirtyAll.split('\n') : []
+  const dirty = dirtyLines.length > 20
+    ? dirtyLines.slice(0, 20).join('\n') + `\n… and ${dirtyLines.length - 20} more (run git status)`
+    : dirtyAll
   const commits = git(cwd, ['log', '--oneline', '-5'])
   const prompts = recentPrompts(input.transcript_path, 5)
 
