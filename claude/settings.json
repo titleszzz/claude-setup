@@ -1,5 +1,5 @@
 {
-  "model": "opus[1m]",
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -115,7 +115,7 @@
   "effortLevel": "high",
   "modelSettings": {
     "claude-opus-5-5": {
-      "effortLevel": "medium"
+      "effortLevel": "xhigh"
     }
   },
   "dialogExpiry": "never",
