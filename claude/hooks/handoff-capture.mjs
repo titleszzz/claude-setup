@@ -25,6 +25,18 @@ const git = (cwd, args) => {
   }
 }
 
+// Prompts are copied into a memory file, so anything that looks like a key,
+// token or password must not survive the copy.
+const redact = (text) => text
+  .replace(/\b(sk|rk|pk)-[A-Za-z0-9_-]{16,}/g, '[redacted]')
+  .replace(/\b(ghp|gho|ghu|ghs|ghr|github_pat|glpat|xox[abprs])[-_][A-Za-z0-9_-]{10,}/g, '[redacted]')
+  .replace(/\bAKIA[0-9A-Z]{16}\b/g, '[redacted]')
+  .replace(/\bAIza[0-9A-Za-z_-]{30,}/g, '[redacted]')
+  .replace(/\b(bearer)\s+[A-Za-z0-9._~+/=-]{16,}/gi, '$1 [redacted]')
+  .replace(/\b(password|passwd|pwd|secret|token|api[_ -]?key)(\s*[:=]\s*|\s+)\S{6,}/gi, '$1$2[redacted]')
+  // Any other long run of letters and digits mixed together reads as a key.
+  .replace(/[A-Za-z0-9_-]{32,}/g, (m) => (/[0-9]/.test(m) && /[A-Za-z]/.test(m) ? '[redacted]' : m))
+
 // Last N real user prompts from the transcript, so the note says what was
 // actually being worked on instead of guessing.
 const recentPrompts = (path, n) => {
@@ -48,6 +60,7 @@ const recentPrompts = (path, n) => {
     if (text.startsWith('<')) continue
     if (text.startsWith('/')) continue
     if (text.length > 500) continue
+    text = redact(text)
     out.push(text.length > 200 ? text.slice(0, 200) + '…' : text)
   }
   return out.slice(-n)
@@ -72,13 +85,16 @@ try {
   const day = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`
   const stamp = `${day} ${pad(now.getHours())}:${pad(now.getMinutes())}`
 
-  // A manual /handoff note carries what was half-done and what comes next.
-  // This script knows neither, so it must not clobber a fresh one.
-  const MANUAL_GRACE_HOURS = 12
+  // A manual note carries what was half-done and what comes next. This script
+  // knows neither, so it never clobbers one, however old. Only a note this
+  // script wrote itself (it carries AUTO_MARK) is replaced. Checking for one
+  // heading was not enough: a hand-written note with other headings got
+  // overwritten 17 minutes after it was saved (2026-09-29).
+  const AUTO_MARK = 'Written by the auto-capture hook'
   if (existsSync(file)) {
     const prev = readFileSync(file, 'utf8')
-    const ageHours = (Date.now() - statSync(file).mtimeMs) / 3600000
-    if (prev.includes('## What I was doing') && ageHours < MANUAL_GRACE_HOURS) {
+    if (prev.trim() && !prev.includes(AUTO_MARK)) {
+      const ageHours = (Date.now() - statSync(file).mtimeMs) / 3600000
       console.log(`handoff: kept the manual note (${ageHours.toFixed(1)}h old), not overwriting it`)
       process.exit(0)
     }
