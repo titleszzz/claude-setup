@@ -133,3 +133,11 @@ Two things that rule must NOT touch:
   written in full plain sentences. A compressed warning is a misread warning.
 
 @RTK.md
+
+# Wattanasuk company projects only
+
+For projects under `E:\Claude_libary\Wsi` (Wattanasuk company work) the live server
+is the Wattanasuk VPS. Its address, SSH port, user and password are in
+`E:\Claude_libary\Wsi\wattanasuk-vps.md`. Read them from there and never copy the
+password anywhere else. This server is for Wattanasuk projects only: never use it
+for any other project, and never use my private VPS (REDACTED-IP) for Wattanasuk.
