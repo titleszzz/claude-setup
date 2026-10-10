@@ -60,6 +60,16 @@
         "lastUpdated": "2026-10-10T22:41:49.403Z",
         "gitCommitSha": "442fc9d6c89b1e937e6f7a477e7071ea75fcbea4"
       }
+    ],
+    "supply-chain-risk-auditor@trailofbits": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\trailofbits\\supply-chain-risk-auditor\\2.0.4",
+        "version": "2.0.4",
+        "installedAt": "2026-10-10T22:41:57.046Z",
+        "lastUpdated": "2026-10-10T22:41:57.046Z",
+        "gitCommitSha": "442fc9d6c89b1e937e6f7a477e7071ea75fcbea4"
+      }
     ]
   }
 }

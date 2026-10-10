@@ -85,7 +85,8 @@
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
     "caveman@caveman": true,
     "superpowers@claude-plugins-official": true,
-    "insecure-defaults@trailofbits": true
+    "insecure-defaults@trailofbits": true,
+    "supply-chain-risk-auditor@trailofbits": true
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
