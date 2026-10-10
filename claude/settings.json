@@ -84,7 +84,8 @@
     "i-have-adhd@i-have-adhd": true,
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
     "caveman@caveman": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "insecure-defaults@trailofbits": true
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
@@ -109,6 +110,12 @@
       "source": {
         "source": "github",
         "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "trailofbits": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills"
       }
     }
   },

@@ -38,5 +38,13 @@
     },
     "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\ui-ux-pro-max-skill",
     "lastUpdated": "2026-08-25T12:35:01.616Z"
+  },
+  "trailofbits": {
+    "source": {
+      "source": "github",
+      "repo": "trailofbits/skills"
+    },
+    "installLocation": "C:\\Users\\9800x3d\\.claude\\plugins\\marketplaces\\trailofbits",
+    "lastUpdated": "2026-10-10T22:41:48.561Z"
   }
 }
