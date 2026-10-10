@@ -80,6 +80,16 @@
         "lastUpdated": "2026-10-10T22:42:04.502Z",
         "gitCommitSha": "442fc9d6c89b1e937e6f7a477e7071ea75fcbea4"
       }
+    ],
+    "differential-review@trailofbits": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\trailofbits\\differential-review\\1.1.4",
+        "version": "1.1.4",
+        "installedAt": "2026-10-10T22:42:12.333Z",
+        "lastUpdated": "2026-10-10T22:42:12.333Z",
+        "gitCommitSha": "442fc9d6c89b1e937e6f7a477e7071ea75fcbea4"
+      }
     ]
   }
 }
