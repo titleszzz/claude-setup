@@ -88,7 +88,8 @@
     "insecure-defaults@trailofbits": true,
     "supply-chain-risk-auditor@trailofbits": true,
     "sharp-edges@trailofbits": true,
-    "differential-review@trailofbits": true
+    "differential-review@trailofbits": true,
+    "firebase-apk-scanner@trailofbits": true
   },
   "extraKnownMarketplaces": {
     "karpathy-skills": {
