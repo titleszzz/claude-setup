@@ -5,7 +5,9 @@
 # Dependency-free JSON parsing (no jq): uses grep -oP + sed, which are
 # always available in the bundled Cygwin/Git-Bash shell on Windows.
 
-input=$(cat)
+# Read the payload, but never wait for ever: a stdin that is never closed left
+# these scripts hanging for hours, one per refresh (2026-10-13).
+input=$(timeout 2 cat)
 
 RESET='\033[0m'
 BOLD='\033[1m'
