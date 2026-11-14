@@ -44,11 +44,11 @@
     "superpowers@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\7.0.0",
-        "version": "7.0.0",
+        "installPath": "C:\\Users\\9800x3d\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\7.0.2",
+        "version": "7.0.2",
         "installedAt": "2026-09-24T09:00:45.505Z",
-        "lastUpdated": "2026-10-17T03:59:03.628Z",
-        "gitCommitSha": "bb92a77741419a4ab5f06e711a283343f1ada0c3"
+        "lastUpdated": "2026-11-14T14:01:07.775Z",
+        "gitCommitSha": "22f0b463e7a5e579904dd6211a520321035526f7"
       }
     ],
     "insecure-defaults@trailofbits": [
