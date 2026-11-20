@@ -2,7 +2,8 @@
     "remote.SSH.remotePlatform": {
         "REDACTED-IP": "linux",
         "192.168.50.141": "linux",
-        "pi5": "linux"
+        "pi5": "linux",
+        "pi": "linux"
     },
     "workbench.startupEditor": "none",
     "claudeCode.useTerminal": true,
